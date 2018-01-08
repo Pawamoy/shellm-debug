@@ -23,13 +23,24 @@ sudo ./install.sh
 ## Usage
 Command-line:
 ```
-shellm-debug -h
-```
+# shellm-debug -h
+Usage: shellm-debug [-tvn] <SCRIPT> [ARGS]
 
-As a library:
-```bash
-# with basher's include
-include shellm-org/shellm-debug lib/debug.sh
-# with shellm's include
-shellm-include shellm-org/shellm-debug lib/debug.sh
+Run a script in path with the -x bash option (and more).
+You should set the PS4 variable for better output.
+
+Options:
+  -t, --test
+    Read the script and warn for encountered syntax errors.
+    Do not actually run the script.
+
+  -v, --verbose
+    Run the script with verbose option.
+
+  -n, --dry-run
+    Options test and verbose combined. Validate the syntax
+    and print the script to stdout.
+
+  -h, --help
+    Print this help and exit.
 ```
