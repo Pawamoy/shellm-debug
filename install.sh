@@ -4,7 +4,7 @@ set -e
 PREFIX="${1:-/usr/local}"
 APP_ROOT="$(dirname "$(readlink -f "$0")")"
 NAMESPACE="shellm-org"
-PACKAGE="shellm-debug"
+PACKAGE="debug"
 INSTALL_PATH="packages/${NAMESPACE}/${PACKAGE}"
 
 _link() {

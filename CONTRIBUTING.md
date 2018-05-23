@@ -16,6 +16,6 @@ Make sure to have atomic commits and contextual commit messages!
 
 [Check out this awesome blog post by Chris Beams for more information.][3]
 
-[1]: https://github.com/shellm-org/shellm-debug/issues/new
-[2]: https://github.com/shellm-org/shellm-debug/compare
+[1]: https://github.com/shellm-org/debug/issues/new
+[2]: https://github.com/shellm-org/debug/compare
 [3]: http://chris.beams.io/posts/git-commit/

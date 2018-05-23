@@ -1,30 +1,30 @@
-# shellm-debug
+# debug
 Shell script debugger.
 
-- Authors: https://github.com/shellm-org/shellm-debug/AUTHORS.md
-- Changelog: https://github.com/shellm-org/shellm-debug/CHANGELOG.md
-- Contributing: https://github.com/shellm-org/shellm-debug/CONTRIBUTING.md
-- Documentation: https://github.com/shellm-org/shellm-debug/wiki
-- License: ISC - https://github.com/shellm-org/shellm-debug/LICENSE
+- Authors: https://github.com/shellm-org/debug/AUTHORS.md
+- Changelog: https://github.com/shellm-org/debug/CHANGELOG.md
+- Contributing: https://github.com/shellm-org/debug/CONTRIBUTING.md
+- Documentation: https://github.com/shellm-org/debug/wiki
+- License: ISC - https://github.com/shellm-org/debug/LICENSE
 
 ## Installation
 Installation with [basher](https://github.com/basherpm/basher):
 ```bash
-basher install shellm-org/shellm-debug
+basher install shellm-org/debug
 ```
 
 Installation from source:
 ```bash
-git clone https://github.com/shellm-org/shellm-debug
-cd shellm-debug
+git clone https://github.com/shellm-org/debug
+cd debug
 sudo ./install.sh
 ```
 
 ## Usage
 Command-line:
 ```
-# shellm-debug -h
-Usage: shellm-debug [-tvn] <SCRIPT> [ARGS]
+# debug -h
+Usage: debug [-tvn] <SCRIPT> [ARGS]
 
 Run a script in path with the -x bash option (and more).
 You should set the PS4 variable for better output.

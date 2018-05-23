@@ -38,5 +38,5 @@ main() {
   printf "\033[;0;39m"
 }
 
-## \usage shellm-debug [-tvn] <SCRIPT> [ARGS]
+## \usage debug [-tvn] <SCRIPT> [ARGS]
 main "$@"

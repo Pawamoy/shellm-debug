@@ -5,8 +5,8 @@ LIBDIR := lib
 MANDIR := man
 WIKIDIR := wiki
 
-MANPAGES := $(addprefix $(MANDIR)/,shellm-debug.1 debug.3)
-WIKIPAGES := $(addprefix $(WIKIDIR)/,bin/shellm-debug.md lib/debug.md)
+MANPAGES := $(addprefix $(MANDIR)/,debug.1 debug.3)
+WIKIPAGES := $(addprefix $(WIKIDIR)/,bin/debug.md lib/debug.md)
 
 ifeq ($(PREFIX), )
 PREFIX := /usr/local
