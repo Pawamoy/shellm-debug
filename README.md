@@ -1,21 +1,21 @@
 # debug
 Shell script debugger.
 
-- Authors: https://github.com/shellm-org/debug/AUTHORS.md
-- Changelog: https://github.com/shellm-org/debug/CHANGELOG.md
-- Contributing: https://github.com/shellm-org/debug/CONTRIBUTING.md
-- Documentation: https://github.com/shellm-org/debug/wiki
-- License: ISC - https://github.com/shellm-org/debug/LICENSE
+- Authors: https://gitlab.com/shellm/debug/AUTHORS.md
+- Changelog: https://gitlab.com/shellm/debug/CHANGELOG.md
+- Contributing: https://gitlab.com/shellm/debug/CONTRIBUTING.md
+- Documentation: https://gitlab.com/shellm/debug/wiki
+- License: ISC - https://gitlab.com/shellm/debug/LICENSE
 
 ## Installation
 Installation with [basher](https://github.com/basherpm/basher):
 ```bash
-basher install shellm-org/debug
+basher install shellm/debug
 ```
 
 Installation from source:
 ```bash
-git clone https://github.com/shellm-org/debug
+git clone https://gitlab.com/shellm/debug
 cd debug
 sudo ./install.sh
 ```
