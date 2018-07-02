@@ -9,7 +9,7 @@
 ## \desc Run a script in path with the -x bash option (and more).
 ## You should set the PS4 variable for better output.
 
-shellm-include shellm/shellm-shellman lib/shellman.sh
+shellm-include shellm/shellman lib/shellman.sh
 
 [ $# -eq 0 ] && usage
 
