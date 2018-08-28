@@ -5,35 +5,35 @@ LIBDIR := lib
 MANDIR := man
 WIKIDIR := wiki
 
-MANPAGES := $(addprefix $(MANDIR)/,debug.1 debug.3)
-WIKIPAGES := $(addprefix $(WIKIDIR)/,bin/debug.md lib/debug.md)
+MANPAGES := $(addprefix $(MANDIR)/,shellm-debug.1)
+WIKIPAGES := $(addprefix $(WIKIDIR)/,bin/shellm-debug.md)
 
 ifeq ($(PREFIX), )
 PREFIX := /usr/local
 endif
 
-all : doc
+all: doc
 
-install :
+install:
 	@./install.sh $(PREFIX)
 
 $(MANDIR)/%.1 : $(BINDIR)/%
-	@shellman --format man $< > $@
+	@shellman -t manpage $< -o $@
 
 $(MANDIR)/%.sh.3 : $(LIBDIR)/%.sh
-	@shellman --format man $< > $@
+	@shellman -t manpage $< -o $@
 
 $(WIKIDIR)/bin/%.md : $(BINDIR)/%
-	@shellman --format markdown $< > $@
+	@shellman -t wikipage $< -o $@
 
 $(WIKIDIR)/lib/%.sh.md : $(LIBDIR)/%.sh
-	@shellman --format markdown $< > $@
+	@shellman -t wikipage $< -o $@
 
-man : $(MANPAGES)
+man: $(MANPAGES)
 
-wiki : $(WIKIPAGES)
+wiki: $(WIKIPAGES)
 
-doc : man wiki
+doc: man wiki
 
 rmdoc:
 	@rm man/* wiki/bin/* wiki/lib/*
