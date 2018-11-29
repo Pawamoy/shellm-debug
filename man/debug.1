@@ -1,10 +1,10 @@
 .if n.ad l
 .nh
 
-.TH shellm-debug 1 "2018-08-29" "Shellman 0.2.2" "User Commands"
+.TH debug 1 "2018-11-29" "shellman 0.4.1" "User Commands"
 
 .SH "NAME"
-shellm-debug \- Shell script debugger
+debug \- Shell script debugger
 
 .SH "SYNOPSIS"
 \fBdebug\fR [\fB\-tvn\fR] <\fISCRIPT\fR> [\fIARGS\fR]
@@ -24,6 +24,9 @@ Run the script with verbose option.
 .IP "\fB\-n\fR, \fB\-\-dry\-run\fR " 4
 Options test and verbose combined. Validate the syntax
 and print the script to stdout.
+
+.IP "\fB\-f\fR, \fB\-\-filter\fR \fIPATTERN\fR" 4
+Filter out PATTERN from debug output.
 
 .IP "\fB\-h\fR, \fB\-\-help\fR " 4
 Print this help and exit.

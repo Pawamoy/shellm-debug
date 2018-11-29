@@ -1,0 +1,12 @@
+{
+  "namespace": "shellm",
+  "project": "debug",
+  "title": "Bash Debug",
+  "subtitle": "Debug your shell scripts",
+  "readme_sections": [
+    "summary",
+    "demo",
+    "installation",
+    "usage"
+  ]
+}

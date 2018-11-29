@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+## \brief Shell script debugger
+## \env PS4
+## Debugger prompt. This is the prefix that bash prepends to
+## the current instruction when using -x option.
+
+## \desc Run a script in path with the -x bash option (and more).
+## You should set the PS4 variable for better output.
+
+if (( $# == 0 )); then
+  doc -u "$0"
+fi
+
+main() {
+  local PATTERN FLAGS=-x
+
+  while [ $# -ne 0 ]; do
+    case "$1" in
+      ## \option -t, --test
+      ## Read the script and warn for encountered syntax errors.
+      ## Do not actually run the script.
+      -t|--test) FLAGS=-n ;;
+      ## \option -v, --verbose
+      ## Run the script with verbose option.
+      -v|--verbose) FLAGS=-xv ;;
+      ## \option -n, --dry-run
+      ## Options test and verbose combined. Validate the syntax
+      ## and print the script to stdout.
+      -n|--dry-run) FLAGS=-xvn ;;
+      ## \option -f, --filter PATTERN
+      ## Filter out PATTERN from debug output.
+      -f|--filter) PATTERN="$2"; shift ;;
+      ## \option -h, --help
+      ## Print this help and exit.
+      -h|--help) doc "$0"; exit 0 ;;
+
+      *) SCRIPT="$1"; shift; break ;;
+    esac
+    shift
+  done
+
+  if [ -n "${PATTERN}" ]; then
+    bash "${FLAGS}" "${SCRIPT}" "$@" 3>&1 1>&2 2>&3 3>&- | grep -v "${PATTERN}"
+    printf "\033[;0;39m"
+  else
+    bash "${FLAGS}" "${SCRIPT}" "$@"
+  fi
+}
+
+## \usage debug [-tvn] <SCRIPT> [ARGS]
+main "$@"
