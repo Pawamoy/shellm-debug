@@ -11,6 +11,8 @@ stages:
     - export PATH="$BASHER_ROOT/bin:$PATH"
     - eval "$(basher init -)"
     - basher install bats-core/bats-core
+    - basher install ztombol/bats-assert
+    - basher install ztombol/bats-support
     - basher link "$(pwd)" shellm/debug
 
 .quality_template: &quality_definition
