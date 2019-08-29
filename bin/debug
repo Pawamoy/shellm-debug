@@ -14,6 +14,15 @@ if (( $# == 0 )); then
   doc -u "$0"
 fi
 
+# code for readline with history
+# HISTFILE="$(mktemp)"
+# history -r "${HISTFILE}"
+#
+# while :; do
+#   read -p "> " -er answer
+#   history -s "${answer}"
+# done
+
 bdbg() {
   local _bdbg_continue
   local _bdbg_read
